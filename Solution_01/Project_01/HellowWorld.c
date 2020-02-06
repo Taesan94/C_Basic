@@ -66,7 +66,7 @@ void getsPutsScanf() {
 	printf(" scanf_s로 정수 입력받기 :  ");
 	scanf_s("%d", &nData); 
 	printf(" nData : %d\n", nData);
-
+	 
 	char nChars[10] ;
 	printf(" scanf_s로 char[] 입력받기 :  ");
 
@@ -82,7 +82,7 @@ void getsPutsScanf() {
 	// "%c"를 한칸 space해서 " %c" 이런식으로하면 \n을 whit space로 인식하고 넘긴다.
 	fflush(stdin);
 	//getchar(); // 이렇게 \n을 빼내도 되긴하는데.. 좋은방법은아니다.
-
+	 
 	char nChar;
 	printf(" scanf_s로 char 한 글자 입력받기 :  ");
 	//인자값에 size도 같이 적어줌.
