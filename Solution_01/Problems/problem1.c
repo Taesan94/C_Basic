@@ -9,9 +9,9 @@ void problem03_01() {
 	// 스페이스도 주의해야 함 !! 
 	//scanf_s("Input: %d", &age);
 
-	scanf_s("  %d", &age);
-	
-	getchar();
+	// 입력버퍼에 \n 처리하기위해서 %*c추가 했다.
+	// scanf()함수의 형식 문자에서 %기호와 형식 문자 사이에 위치한 별표(*)는 '버림'을 의미한다.
+	scanf_s("%d%*c", &age);
 
 	printf("이름을 입력하세요. : ");
 	char name[12];
@@ -30,11 +30,19 @@ void problem03_01() {
 
 }
 
+void practice() {
+
+	getchar();
+	putchar(getchar());
+}
+
 
 int main(void) {
 
-	printf("### problem ###");
+	printf("### problem ### \n");
 	
-	problem03_01();
+	//problem03_01();
+
+	practice();
 
 }
