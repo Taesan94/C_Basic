@@ -74,13 +74,15 @@ void getsPutsScanf() {
 	scanf_s("%s", nChars , 10); 
 	printf(" nChars : %s\n", nChars);
 
-	// 개행문자 처리해주기위함. 
+	// ffulsh함수는 개행문자 처리해주기위함. 
 	// 이건 window에서만 먹힘 .. 
 	// 리눅스는 _fpurge(stdin)..
 	// visualStudio 2015부터 안먹힌다고함.
+	
+	// fflush(stdin);
+
 	// %c입력받을때 앞에 %*c사용하면 버퍼를 받지만 버리고, 다음 %c를 통해 데이터를 받는다.
 	// "%c"를 한칸 space해서 " %c" 이런식으로하면 \n을 whit space로 인식하고 넘긴다.
-	fflush(stdin);
 	//getchar(); // 이렇게 \n을 빼내도 되긴하는데.. 좋은방법은아니다.
 	 
 	char nChar;
