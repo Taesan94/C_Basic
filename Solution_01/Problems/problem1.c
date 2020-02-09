@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-void problem03_01() {			
-	
+void problem03_01() {
+
 	printf("나이를 입력하세요. : ");
 	int age;
 
@@ -17,32 +17,92 @@ void problem03_01() {
 	char name[12];
 	gets_s(name, sizeof(name));
 
-	
+
 	printf("당신의 나이는 %d살이고 이름은 '%s'입니다.\n", age, name);
 
-	char ch = 0 ;
+	char ch = 0;
 
 	printf(" char한문자를 입력하세요 : ");
 
 	// %c의 경우 , scanf_s()함수에서는 주소변수, 바이트크기단위를 인자로 넘겨주어야 한다.
-	scanf_s("%c", &ch , sizeof(ch));
-	printf(" 입력한 문자는 %c 입니다. \n",ch);
+	scanf_s("%c", &ch, sizeof(ch));
+	printf(" 입력한 문자는 %c 입니다. \n", ch);
 
 }
 
-void practice() {
+void problem04_01() {
+	
+	int a, b;
+	printf("정수 a,b를 입력하세요. a,b 형태로 입력하세요! \n");
+	scanf_s("%d,%d",&a,&b);
+	printf("두 정수의 평균은 %.2f 입니다", (a + b) / 2.0f );
 
-	getchar();
-	putchar(getchar());
+}
+
+void problem04_02() {
+	
+	int second = 0;
+	
+	printf("초를 입력하세요. : ");
+	scanf_s("%d", &second);
+	
+	int input, hour, minute;
+
+	// 처음 입력 초
+	input = second;
+	
+	// 시간단위로 나누려면 60 * 60 이니깐 3600 초..
+	hour = second/3600;
+
+	second %= 3600;
+	
+	// 분단위는 60초.
+	minute = second / 60;
+
+	second %= 60;
+	
+	printf("%d초는 %02d시간 %02d분 %02d초 입니다.", input, hour, minute, second);
+
+}
+
+void basic() {
+
+	int nInput, nTotal = 0;
+
+	printf(" 첫 번째 숫자 입력 : ");
+	scanf_s("%d", &nInput);
+	nTotal += nInput;
+	printf(" 두 번째 숫자 입력 : ");
+	scanf_s("%d", &nInput);
+	nTotal += nInput;
+	printf(" 세 번째 숫자 입력 : ");
+	scanf_s("%d", &nInput);
+	nTotal += nInput;
+
+	printf("Total : %d\n", nTotal);
+}
+
+void bitOperationTest() {
+
+	printf("%08X\n", 0xFFFFFFFF & 0x00080000);
+	printf("%08X\n", 0xAAAABBBB & 0x00080000);
+	printf("%08X\n", 0xAABBCCDD & 0x00080000);
+	
+	printf("%08X\n", 0xFFFFFFFF | 0x00080000);
+	printf("%08X\n", 0x11223344 | 0x00080000);
+	printf("%08X\n", 0x00000000 | 0x000F0000);
+
+
 }
 
 
 int main(void) {
 
 	printf("### problem ### \n");
-	
-	//problem03_01();
 
-	practice();
-
-}
+	// problem03_01();
+	// problem04_01();
+	// problem04_02();
+	// basic();
+	bitOperationTest();
+}	
