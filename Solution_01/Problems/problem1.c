@@ -140,6 +140,21 @@ void select() {
 	printf(" 결과 : %s", tall >= 150 ? "합격" : "불합격");
 }
 
+void survival() {
+
+
+	int nMax = 0;
+	int a, b, c;
+	
+	scanf_s("%d,%d,%d", &a, &b, &c);
+
+	nMax = a > b ? a : b;
+	nMax = nMax > c ? nMax: c;
+
+	printf("MAX : %d\n", nMax);
+
+}
+
 
 int main(void) {
 
@@ -154,4 +169,5 @@ int main(void) {
 	// oprelinetfloat01();
 	// threeHangOper();
 	// select();
+	survival();
 }	
