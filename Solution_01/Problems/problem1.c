@@ -92,7 +92,21 @@ void bitOperationTest() {
 	printf("%08X\n", 0x11223344 | 0x00080000);
 	printf("%08X\n", 0x00000000 | 0x000F0000);
 
+}
 
+// 마스크연산이란
+void maskOper() {
+	int nData = 0x11223344;
+
+	printf("%08X\n", nData & 0xFFFF0000 );
+	printf("%08X\n", nData & 0x00FFFF00);
+	printf("%08X\n", nData & 0x0000FFFF);
+	printf("%08X\n", nData & 0xFF0000FF);
+
+	// 11220000
+	// 00223300
+	// 00003344
+	// 11000044
 }
 
 
@@ -104,5 +118,6 @@ int main(void) {
 	// problem04_01();
 	// problem04_02();
 	// basic();
-	bitOperationTest();
+	//bitOperationTest();
+	maskOper();
 }	
