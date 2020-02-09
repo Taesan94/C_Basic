@@ -117,6 +117,21 @@ void oprelinetfloat01() {
 	printf("%d\n", 300 == 300.00001F);
 }
 
+void threeHangOper() {
+	
+	int nInput = 0, nSelect = 0;
+	scanf_s("%d", &nInput);
+
+	// " '=': 왼쪽 피연산자는 l-value이어야 합니다. " 하면서 에러남 !!
+	// nInput <= 10 ? nSelect = 10 : nSelect = 20;
+		
+	// nInput <= 10 ? (nSelect = 10) : (nSelect = 20);
+	// nInput <= 10 ? nSelect = 10 : nSelect;
+
+	printf("%d\n", nSelect);
+
+
+}
 
 int main(void) {
 
@@ -128,5 +143,6 @@ int main(void) {
 	// basic();
 	// bitOperationTest();
 	// maskOper();
-	oprelinetfloat01();
+	// oprelinetfloat01();
+	threeHangOper();
 }	
