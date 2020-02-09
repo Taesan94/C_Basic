@@ -109,6 +109,14 @@ void maskOper() {
 	// 11000044
 }
 
+void oprelinetfloat01() {
+	printf("%d\n", 300 == 299.99999F);
+	printf("%d\n", 300 == 299.99999);
+
+	printf("%d\n", 300 == 299.9999F);
+	printf("%d\n", 300 == 300.00001F);
+}
+
 
 int main(void) {
 
@@ -118,6 +126,7 @@ int main(void) {
 	// problem04_01();
 	// problem04_02();
 	// basic();
-	//bitOperationTest();
-	maskOper();
+	// bitOperationTest();
+	// maskOper();
+	oprelinetfloat01();
 }	
