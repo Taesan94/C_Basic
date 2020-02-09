@@ -140,7 +140,7 @@ void select() {
 	printf(" 결과 : %s", tall >= 150 ? "합격" : "불합격");
 }
 
-void survival() {
+void tournoment() {
 
 
 	int nMax = 0;
