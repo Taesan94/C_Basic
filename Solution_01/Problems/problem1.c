@@ -129,9 +129,17 @@ void threeHangOper() {
 	// nInput <= 10 ? nSelect = 10 : nSelect;
 
 	printf("%d\n", nSelect);
-
-
 }
+
+void select() {
+	int tall;
+
+	printf(" 키를 입력해 주세요 : ");
+	scanf_s("%d", &tall);
+
+	printf(" 결과 : %s", tall >= 150 ? "합격" : "불합격");
+}
+
 
 int main(void) {
 
@@ -144,5 +152,6 @@ int main(void) {
 	// bitOperationTest();
 	// maskOper();
 	// oprelinetfloat01();
-	threeHangOper();
+	// threeHangOper();
+	// select();
 }	
