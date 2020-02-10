@@ -213,6 +213,161 @@ void functionFor() {
 		break;
 	}
 
+}
+
+void forP1() {
+
+	int i = 1;
+	int sum = 0;
+
+	while (i <= 10) {
+		sum += i;
+		i++;
+	}
+
+	printf(" 1~10까지의 합 : %d ", sum);
+
+}
+
+void forP2() {
+
+	int i = 0;
+
+	scanf_s("%d", &i);
+	
+
+	int start = 1;
+
+	while (1) {
+
+		if (i < 2 || i > 9) {
+			printf("ERROR");
+			break;
+		}
+
+		printf("%d & %d = %d\n", i, start, i * start);
+		if (start == 9) break;
+		start++;
+	}
+
+}
+
+void makeT() {
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j <= i; j++) {
+			printf("* ");
+		}
+		printf("\n");
+	}
+}
+
+void makeT2() {	
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = i; j < 4; j++) {
+			printf("\t");
+		}
+
+		for (int k = 0; k <= i; k++) {
+			printf("*\t");
+		}
+
+		printf("\n");
+	}
+	
+
+}
+
+void makeT3() {	
+
+	int index = 0;
+
+	for (int i = 1; i <= 5; i++) {
+
+		for (int j = i; j < 5; j++) {
+			printf("\t");
+		}
+
+		//1,3,5,7,9
+		for (int k = 0; k < (2*i)-1; k++) {
+			printf("*\t");
+		}
+
+		printf("\n");
+	}			
+}
+
+void make3_2() {
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j < 5+i; j++) {
+
+			if ( j+i <= 3 ) printf("\t");
+			else printf("*\t");
+		}
+		printf("\n");
+	}
+}
+
+void loopPractice1() {
+
+	int cnt = 0;
+	int sum = 0;
+
+	for (int i = 1; i < 101; i++) {
+		if (i % 4 == 0) {
+			cnt++;
+			sum += i;
+	}
+		}
+
+	printf(" 4의 배수는 총 %d 개 이고, 총합은 %d 입니다.", cnt , sum);
+
+}
+
+void loopPractice2() {
+	
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			if (i + j <= 3) printf("\t");
+			else printf("\t*\t");
+		}
+		printf("\n");
+	}
+}
+
+void loopPractice4() {
+
+	int nInput;
+
+	INPUT : 
+		printf("Input number : ");
+		scanf_s("%d", &nInput);
+
+	if (nInput < 0 || nInput > 10) {
+		goto INPUT;
+	}
+
+	puts("End");
+
+}
+
+void loopPractice4_answer() {
+
+	int input = 11;
+
+	while (1) {
+
+		if (input < 0 || input > 10) {
+			printf("Input number : ");
+			scanf_s("%d", &input);
+		}
+		else break;
+	}
 
 }
 
@@ -233,6 +388,16 @@ int main(void) {
 	// tournoment();
 	// problem06_02();
 	// cautionIfScope();
-	functionFor();
+	// functionFor();
+	// forP1();
+	// forP2();
+	// makeT();
+	// makeT2();
+	// makeT3();
+	// make3_2();
+	// loopPractice1();
+	// loopPractice2();
+	// loopPractice3();
+	loopPractice4_answer();
 
 }	
