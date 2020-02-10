@@ -155,6 +155,39 @@ void tournoment() {
 
 }
 
+void problem06_02() {
+
+	int age;
+
+	printf(" 나이를 입력해 주세요 : ");
+	scanf_s("%d", &age);
+
+	int won = 1000;
+
+	if (age < 20) won *= (0.75);
+
+	printf("최종요금 : %d", won);
+}
+
+void cautionIfScope() {
+
+	int nInput = 0;
+
+	scanf_s("%d", &nInput);
+
+	if (nInput > 10) {
+		int nInput = 20;
+		printf("%d\n", nInput);
+
+		if (nInput < 20) {
+			int nInput = 30;
+			printf("%d\n", nInput);
+		}
+	}
+
+	printf("%d\n" , nInput);
+}
+
 
 int main(void) {
 
@@ -169,5 +202,8 @@ int main(void) {
 	// oprelinetfloat01();
 	// threeHangOper();
 	// select();
-	survival();
+	// tournoment();
+	// problem06_02();
+	cautionIfScope();
+
 }	
