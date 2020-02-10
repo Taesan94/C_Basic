@@ -188,6 +188,34 @@ void cautionIfScope() {
 	printf("%d\n" , nInput);
 }
 
+void functionFor() {
+
+	int i = 0;
+
+	for (i = 0; i < 5; ++i) {
+		printf("%dth\n", i); // th그냥 문자네 ㅡ..ㅡ
+	}
+
+	i = 0;
+
+	for (; i < 5; i++) {
+		printf("[%d] 초기 화 i 생략 가능함 ! 초깃값 0부터 겠네.\n", i );
+	}
+
+
+	for (i = 0; i < 5;) {
+		printf("[%d] 계수기 생략하면.. 무한루프 빠지네 ㅡ..ㅡ 자동 1증가 안되는군 ! !\n",i);
+		break;
+	}
+
+	for (;; ) {
+		printf(" 무 . 한. 루 . 프 . !! ");
+		break;
+	}
+
+
+}
+
 
 int main(void) {
 
@@ -204,6 +232,7 @@ int main(void) {
 	// select();
 	// tournoment();
 	// problem06_02();
-	cautionIfScope();
+	// cautionIfScope();
+	functionFor();
 
 }	
