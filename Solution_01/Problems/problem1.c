@@ -383,6 +383,7 @@ void arrayTest() {
 		printf("arr2[%d] = %d\n", i, arr2[i]);
 	}
 
+	printf("arr2[0]ÀÇ ÁÖ¼Ò : %d" ,&arr2[0]);
 }
 
 int main(void) {
