@@ -155,6 +155,20 @@ void tournoment() {
 
 }
 
+void arrayTest() {
+
+	int arr1[] = { 1,2,3 };
+	int arr2[] = { 4,5,6 };
+
+	// arr1 = arr2; // 안됨
+	*arr1 = arr2; // 되는데.. 내가 의도한 대로안되네.. 그냥 arr1[0]번째 요소에 .. arr2의 주소값이 들어가는군..
+
+	for (int i = 0; i < 3; i++) {
+		printf("arr1[%d] = %d\n", i , arr1[i]);
+		printf("arr2[%d] = %d\n", i , arr2[i]);
+	}
+}
+
 
 int main(void) {
 
@@ -169,5 +183,8 @@ int main(void) {
 	// oprelinetfloat01();
 	// threeHangOper();
 	// select();
-	survival();
+	// survival();
+	arrayTest();
+	// printf("true : %d , false : %d " , 1==1 , 1==2);
+
 }	
