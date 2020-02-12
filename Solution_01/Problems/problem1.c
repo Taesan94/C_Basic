@@ -386,6 +386,37 @@ void arrayTest() {
 	printf("arr2[0]ÀÇ ÁÖ¼Ò : %d" ,&arr2[0]);
 }
 
+void z9j9() {
+
+	int arr[5][5] ;
+	int cnt = 1;
+
+	for (int i = 0; i < 5; i++) {
+
+		int reverse = 0;
+
+		if (i % 2 == 1) reverse = 1;
+
+		if ( reverse == 0) {
+			for (int j = 0; j < 5; j++) {
+				arr[i][j] = cnt++;
+			}
+		}
+		else {
+			for (int j = 4; j >= 0; j--) {
+				arr[i][j] = cnt++;
+			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			printf("%d\t", arr[i][j]);
+		}
+		putchar('\n');
+	}
+}
+
 int main(void) {
 
 	printf("### problem ### \n");
@@ -416,6 +447,7 @@ int main(void) {
 	// loopPractice2();
 	// loopPractice3();
 	// loopPractice4_answer();
-	arrayTest();
+	// arrayTest();
+	z9j9();
 
 }	
