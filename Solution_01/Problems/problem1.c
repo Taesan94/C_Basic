@@ -417,6 +417,24 @@ void z9j9() {
 	}
 }
 
+void snail() {
+
+	// 꼭풀어보기.. 달팽이출력
+
+	int arr[5][5];
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j < 5; j++) {
+			
+		}
+
+	}
+
+}
+
+void add(int, int);
+
 int main(void) {
 
 	printf("### problem ### \n");
@@ -448,6 +466,12 @@ int main(void) {
 	// loopPractice3();
 	// loopPractice4_answer();
 	// arrayTest();
-	z9j9();
+	// z9j9();
+	// add(1, 2);
+	
+	
+}
 
-}	
+void add(int a, int b) {
+	printf("%d",a + b);
+}
