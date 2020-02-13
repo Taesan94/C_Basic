@@ -16,7 +16,11 @@ EndProject
 =======
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointer", "Pointer\Pointer.vcxproj", "{BF557912-F945-4196-B7D5-75D2C27F9F11}"
 EndProject
+<<<<<<< HEAD
 >>>>>>> 18c9922... 포인터 살짝사용해보기 !
+=======
+>>>>>>> 5bb3c47... 포인터 살짝사용해보기 !
+>>>>>>> 8be8a583a3b29cc6e8fae1621d95510eab59cb2f
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,7 +49,11 @@ Global
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 18c9922... 포인터 살짝사용해보기 !
+=======
+>>>>>>> 5bb3c47... 포인터 살짝사용해보기 !
+>>>>>>> 8be8a583a3b29cc6e8fae1621d95510eab59cb2f
 		{BF557912-F945-4196-B7D5-75D2C27F9F11}.Debug|x64.ActiveCfg = Debug|x64
 		{BF557912-F945-4196-B7D5-75D2C27F9F11}.Debug|x64.Build.0 = Debug|x64
 		{BF557912-F945-4196-B7D5-75D2C27F9F11}.Debug|x86.ActiveCfg = Debug|Win32
@@ -57,7 +65,11 @@ Global
 <<<<<<< HEAD
 >>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 =======
+<<<<<<< HEAD
 >>>>>>> 18c9922... 포인터 살짝사용해보기 !
+=======
+>>>>>>> 5bb3c47... 포인터 살짝사용해보기 !
+>>>>>>> 8be8a583a3b29cc6e8fae1621d95510eab59cb2f
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
