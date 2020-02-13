@@ -156,6 +156,7 @@ void tournoment() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void arrayTest() {
 
 	int arr1[] = { 1,2,3 };
@@ -169,6 +170,8 @@ void arrayTest() {
 		printf("arr2[%d] = %d\n", i , arr2[i]);
 	}
 =======
+=======
+>>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 void problem06_02() {
 
 	int age;
@@ -382,10 +385,80 @@ void loopPractice4_answer() {
 		}
 		else break;
 	}
+<<<<<<< HEAD
 
 >>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
 }
 
+=======
+}
+
+void arrayTest() {
+
+	int arr1[] = { 1,2,3 };
+	int arr2[] = { 4,5,6 };
+
+	// arr1 = arr2; // 안됨
+	*arr1 = arr2; // 되는데.. 내가 의도한 대로안되네.. 그냥 arr1[0]번째 요소에 .. arr2의 주소값이 들어가는군..
+
+	for (int i = 0; i < 3; i++) {
+		printf("arr1[%d] = %d\n", i, arr1[i]);
+		printf("arr2[%d] = %d\n", i, arr2[i]);
+	}
+
+	printf("arr2[0]의 주소 : %d" ,&arr2[0]);
+}
+
+void z9j9() {
+
+	int arr[5][5] ;
+	int cnt = 1;
+
+	for (int i = 0; i < 5; i++) {
+
+		int reverse = 0;
+
+		if (i % 2 == 1) reverse = 1;
+
+		if ( reverse == 0) {
+			for (int j = 0; j < 5; j++) {
+				arr[i][j] = cnt++;
+			}
+		}
+		else {
+			for (int j = 4; j >= 0; j--) {
+				arr[i][j] = cnt++;
+			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			printf("%d\t", arr[i][j]);
+		}
+		putchar('\n');
+	}
+}
+
+void snail() {
+
+	// 꼭풀어보기.. 달팽이출력
+
+	int arr[5][5];
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j < 5; j++) {
+			
+		}
+
+	}
+
+}
+
+void add(int, int);
+
+>>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 
 int main(void) {
 
@@ -401,10 +474,16 @@ int main(void) {
 	// threeHangOper();
 	// select();
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// survival();
 	arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
 =======
+=======
+	// survival();
+	// arrayTest();
+	// printf("true : %d , false : %d " , 1==1 , 1==2);
+>>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 	// tournoment();
 	// problem06_02();
 	// cautionIfScope();
@@ -418,7 +497,21 @@ int main(void) {
 	// loopPractice1();
 	// loopPractice2();
 	// loopPractice3();
+<<<<<<< HEAD
 	loopPractice4_answer();
 >>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
 
 }	
+=======
+	// loopPractice4_answer();
+	// arrayTest();
+	// z9j9();
+	// add(1, 2);
+	
+	
+}
+
+void add(int a, int b) {
+	printf("%d",a + b);
+}
+>>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
