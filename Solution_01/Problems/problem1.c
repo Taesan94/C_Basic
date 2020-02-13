@@ -155,11 +155,8 @@ void tournoment() {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-void arrayTest() {
-=======
+
+
 void arrayTest() {
 
 	int arr1[] = { 1,2,3 };
@@ -169,10 +166,11 @@ void arrayTest() {
 	*arr1 = arr2; // �Ǵµ�.. ���� �ǵ��� ��ξȵǳ�.. �׳� arr1[0]��° ��ҿ� .. arr2�� �ּҰ��� ���±�..
 
 	for (int i = 0; i < 3; i++) {
-		printf("arr1[%d] = %d\n", i , arr1[i]);
-		printf("arr2[%d] = %d\n", i , arr2[i]);
+		printf("arr1[%d] = %d\n", i, arr1[i]);
+		printf("arr2[%d] = %d\n", i, arr2[i]);
 	}
-=======
+}
+
 void problem06_02() {
 
 	int age;
@@ -386,16 +384,8 @@ void loopPractice4_answer() {
 		}
 		else break;
 	}
-
-<<<<<<< HEAD
->>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
-=======
-	printf("arr2[0]�� �ּ� : %d" ,&arr2[0]);
->>>>>>> 11e6123...  *arr1 = arr2 햇을때 arr1[0]에 arr2[0]의 주소가 들어가는게 맞았다 !! 검증 함.
 }
 
-<<<<<<< HEAD
-=======
 void z9j9() {
 
 	int arr[5][5] ;
@@ -426,7 +416,7 @@ void z9j9() {
 		putchar('\n');
 	}
 }
->>>>>>> 16c0750... 2차원 배열 지그재그 풀어보기. .난이도낮음..
+
 
 void snail() {
 
@@ -446,7 +436,7 @@ void snail() {
 
 void add(int, int);
 
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
+void arrCopyTest() {
 
 	int arr1[] = { 1,2,3 };
 	int arr2[] = { 4,5,6 };
@@ -455,12 +445,11 @@ void add(int, int);
 	*arr1 = arr2; // �Ǵµ�.. ���� �ǵ��� ��ξȵǳ�.. �׳� arr1[0]��° ��ҿ� .. arr2�� �ּҰ��� ���±�..
 
 	for (int i = 0; i < 3; i++) {
-		printf("arr1[%d] = %d\n", i , arr1[i]);
-		printf("arr2[%d] = %d\n", i , arr2[i]);
+		printf("arr1[%d] = %d\n", i, arr1[i]);
+		printf("arr2[%d] = %d\n", i, arr2[i]);
 	}
-=======
-=======
->>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
+}
+
 void problem06_02() {
 
 	int age;
@@ -674,13 +663,10 @@ void loopPractice4_answer() {
 		}
 		else break;
 	}
-<<<<<<< HEAD
 
->>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
 }
 
-=======
-}
+
 
 void arrayTest() {
 
@@ -729,10 +715,7 @@ void z9j9() {
 	}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 606da5d... 함수 간단하게 써보기
+
 void snail() {
 
 	// ��Ǯ���.. ���������
@@ -751,21 +734,7 @@ void snail() {
 
 void add(int, int);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 
-=======
->>>>>>> 1c1d2db... 2차원 배열 지그재그 풀어보기. .난이도낮음..
-=======
->>>>>>> 606da5d... 함수 간단하게 써보기
-=======
-
-<<<<<<< HEAD
->>>>>>> 18c9922... 포인터 살짝사용해보기 !
-=======
->>>>>>> 5bb3c47... 포인터 살짝사용해보기 !
->>>>>>> 8be8a583a3b29cc6e8fae1621d95510eab59cb2f
 int main(void) {
 
 	printf("### problem ### \n");
@@ -779,23 +748,15 @@ int main(void) {
 	// oprelinetfloat01();
 	// threeHangOper();
 	// select();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
+
 	// survival();
 	arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
-=======
-<<<<<<< HEAD
-=======
+
 	// survival();
 	// arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
->>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
-=======
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
+
 	// tournoment();
 	// problem06_02();
 	// cautionIfScope();
@@ -809,23 +770,11 @@ int main(void) {
 	// loopPractice1();
 	// loopPractice2();
 	// loopPractice3();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
-	loopPractice4_answer();
->>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
-=======
 	// loopPractice4_answer();
 	// arrayTest();
-<<<<<<< HEAD
+
 	z9j9();
-<<<<<<< HEAD
->>>>>>> 1c1d2db... 2차원 배열 지그재그 풀어보기. .난이도낮음..
 
-}	
-=======
 	// loopPractice4_answer();
 	// arrayTest();
 	// z9j9();
@@ -834,28 +783,7 @@ int main(void) {
 	
 }
 
-void add(int a, int b) {
-	printf("%d",a + b);
-}
->>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
-=======
->>>>>>> 16c0750... 2차원 배열 지그재그 풀어보기. .난이도낮음..
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
-=======
-	// z9j9();
-	// add(1, 2);
-	
-	
-}
-<<<<<<< HEAD
-=======
->>>>>>> 94f9f87... 함수 간단하게 써보기
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 
 void add(int a, int b) {
 	printf("%d",a + b);
 }
-<<<<<<< HEAD
->>>>>>> 606da5d... 함수 간단하게 써보기
-=======
->>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
