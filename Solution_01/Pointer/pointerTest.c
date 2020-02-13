@@ -1,5 +1,8 @@
 #include<stdio.h>
+// malloc(), calloc()함수를 위한 헤더 포함
 #include<stdlib.h>
+//memset()함수를 위한 헤더 포함
+#include<string.h>
 
 void pointerOper() {
 
@@ -36,10 +39,31 @@ void ptrmalloc01() {
 	free(pList);
 }
 
-void main() {
+void badMemoryAccess() {
+	char* pszBuffer = NULL;
+
+	pszBuffer = (char*)malloc(12);
+	gets(pszBuffer);
+	puts(pszBuffer);
+
+	// 오류확인을 위해 의도적으로 해제하지 않음
+	  free(pszBuffer);
+}
+
+int main( int argc, char* argv[]) {
 	printf("### Pointer ###\n");
 
 	// pointerOper();
+	// ptrmalloc01();
+	// badMemoryAccess();
 
-	ptrmalloc01();
+	int i = 0;
+
+	for (i = 0; i < argc; i++)
+		puts(argv[i]);
+
+	puts("END");
+	
+	return 0;
+
 }
