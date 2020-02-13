@@ -157,7 +157,296 @@ void tournoment() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void arrayTest() {
+=======
+void arrayTest() {
+
+	int arr1[] = { 1,2,3 };
+	int arr2[] = { 4,5,6 };
+
+	// arr1 = arr2; // ¾ÈµÊ
+	*arr1 = arr2; // µÇ´Âµ¥.. ³»°¡ ÀÇµµÇÑ ´ë·Î¾ÈµÇ³×.. ±×³É arr1[0]¹øÂ° ¿ä¼Ò¿¡ .. arr2ÀÇ ÁÖ¼Ò°ªÀÌ µé¾î°¡´Â±º..
+
+	for (int i = 0; i < 3; i++) {
+		printf("arr1[%d] = %d\n", i , arr1[i]);
+		printf("arr2[%d] = %d\n", i , arr2[i]);
+	}
+=======
+void problem06_02() {
+
+	int age;
+
+	printf(" ³ªÀÌ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+	scanf_s("%d", &age);
+
+	int won = 1000;
+
+	if (age < 20) won *= (0.75);
+
+	printf("ÃÖÁ¾¿ä±İ : %d", won);
+}
+
+void cautionIfScope() {
+
+	int nInput = 0;
+
+	scanf_s("%d", &nInput);
+
+	if (nInput > 10) {
+		int nInput = 20;
+		printf("%d\n", nInput);
+
+		if (nInput < 20) {
+			int nInput = 30;
+			printf("%d\n", nInput);
+		}
+	}
+
+	printf("%d\n" , nInput);
+}
+
+void functionFor() {
+
+	int i = 0;
+
+	for (i = 0; i < 5; ++i) {
+		printf("%dth\n", i); // th±×³É ¹®ÀÚ³× ¤Ñ..¤Ñ
+	}
+
+	i = 0;
+
+	for (; i < 5; i++) {
+		printf("[%d] ÃÊ±â È­ i »ı·« °¡´ÉÇÔ ! ÃÊ±ê°ª 0ºÎÅÍ °Ú³×.\n", i );
+	}
+
+
+	for (i = 0; i < 5;) {
+		printf("[%d] °è¼ö±â »ı·«ÇÏ¸é.. ¹«ÇÑ·çÇÁ ºüÁö³× ¤Ñ..¤Ñ ÀÚµ¿ 1Áõ°¡ ¾ÈµÇ´Â±º ! !\n",i);
+		break;
+	}
+
+	for (;; ) {
+		printf(" ¹« . ÇÑ. ·ç . ÇÁ . !! ");
+		break;
+	}
+
+}
+
+void forP1() {
+
+	int i = 1;
+	int sum = 0;
+
+	while (i <= 10) {
+		sum += i;
+		i++;
+	}
+
+	printf(" 1~10±îÁöÀÇ ÇÕ : %d ", sum);
+
+}
+
+void forP2() {
+
+	int i = 0;
+
+	scanf_s("%d", &i);
+	
+
+	int start = 1;
+
+	while (1) {
+
+		if (i < 2 || i > 9) {
+			printf("ERROR");
+			break;
+		}
+
+		printf("%d & %d = %d\n", i, start, i * start);
+		if (start == 9) break;
+		start++;
+	}
+
+}
+
+void makeT() {
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j <= i; j++) {
+			printf("* ");
+		}
+		printf("\n");
+	}
+}
+
+void makeT2() {	
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = i; j < 4; j++) {
+			printf("\t");
+		}
+
+		for (int k = 0; k <= i; k++) {
+			printf("*\t");
+		}
+
+		printf("\n");
+	}
+	
+
+}
+
+void makeT3() {	
+
+	int index = 0;
+
+	for (int i = 1; i <= 5; i++) {
+
+		for (int j = i; j < 5; j++) {
+			printf("\t");
+		}
+
+		//1,3,5,7,9
+		for (int k = 0; k < (2*i)-1; k++) {
+			printf("*\t");
+		}
+
+		printf("\n");
+	}			
+}
+
+void make3_2() {
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j < 5+i; j++) {
+
+			if ( j+i <= 3 ) printf("\t");
+			else printf("*\t");
+		}
+		printf("\n");
+	}
+}
+
+void loopPractice1() {
+
+	int cnt = 0;
+	int sum = 0;
+
+	for (int i = 1; i < 101; i++) {
+		if (i % 4 == 0) {
+			cnt++;
+			sum += i;
+	}
+		}
+
+	printf(" 4ÀÇ ¹è¼ö´Â ÃÑ %d °³ ÀÌ°í, ÃÑÇÕÀº %d ÀÔ´Ï´Ù.", cnt , sum);
+
+}
+
+void loopPractice2() {
+	
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			if (i + j <= 3) printf("\t");
+			else printf("\t*\t");
+		}
+		printf("\n");
+	}
+}
+
+void loopPractice4() {
+
+	int nInput;
+
+	INPUT : 
+		printf("Input number : ");
+		scanf_s("%d", &nInput);
+
+	if (nInput < 0 || nInput > 10) {
+		goto INPUT;
+	}
+
+	puts("End");
+
+}
+
+void loopPractice4_answer() {
+
+	int input = 11;
+
+	while (1) {
+
+		if (input < 0 || input > 10) {
+			printf("Input number : ");
+			scanf_s("%d", &input);
+		}
+		else break;
+	}
+
+<<<<<<< HEAD
+>>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
+=======
+	printf("arr2[0]ÀÇ ÁÖ¼Ò : %d" ,&arr2[0]);
+>>>>>>> 11e6123...  *arr1 = arr2 í–‡ì„ë•Œ arr1[0]ì— arr2[0]ì˜ ì£¼ì†Œê°€ ë“¤ì–´ê°€ëŠ”ê²Œ ë§ì•˜ë‹¤ !! ê²€ì¦ í•¨.
+}
+
+<<<<<<< HEAD
+=======
+void z9j9() {
+
+	int arr[5][5] ;
+	int cnt = 1;
+
+	for (int i = 0; i < 5; i++) {
+
+		int reverse = 0;
+
+		if (i % 2 == 1) reverse = 1;
+
+		if ( reverse == 0) {
+			for (int j = 0; j < 5; j++) {
+				arr[i][j] = cnt++;
+			}
+		}
+		else {
+			for (int j = 4; j >= 0; j--) {
+				arr[i][j] = cnt++;
+			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			printf("%d\t", arr[i][j]);
+		}
+		putchar('\n');
+	}
+}
+>>>>>>> 16c0750... 2ì°¨ì› ë°°ì—´ ì§€ê·¸ì¬ê·¸ í’€ì–´ë³´ê¸°. .ë‚œì´ë„ë‚®ìŒ..
+
+void snail() {
+
+	// ²ÀÇ®¾îº¸±â.. ´ŞÆØÀÌÃâ·Â
+
+	int arr[5][5];
+
+	for (int i = 0; i < 5; i++) {
+
+		for (int j = 0; j < 5; j++) {
+			
+		}
+
+	}
+
+}
+
+void add(int, int);
+
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 
 	int arr1[] = { 1,2,3 };
 	int arr2[] = { 4,5,6 };
@@ -492,15 +781,21 @@ int main(void) {
 	// select();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 	// survival();
 	arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
 =======
+<<<<<<< HEAD
 =======
 	// survival();
 	// arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
 >>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
+=======
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 	// tournoment();
 	// problem06_02();
 	// cautionIfScope();
@@ -516,6 +811,9 @@ int main(void) {
 	// loopPractice3();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 	loopPractice4_answer();
 >>>>>>> f31705a30df046a51afe0a1ea535cb357e0f0d3f
 =======
@@ -523,6 +821,7 @@ int main(void) {
 	// arrayTest();
 <<<<<<< HEAD
 	z9j9();
+<<<<<<< HEAD
 >>>>>>> 1c1d2db... 2ì°¨ì› ë°°ì—´ ì§€ê·¸ì¬ê·¸ í’€ì–´ë³´ê¸°. .ë‚œì´ë„ë‚®ìŒ..
 
 }	
@@ -540,13 +839,23 @@ void add(int a, int b) {
 }
 >>>>>>> 98f29eb002fd5213d4c1bde031f9aa87685bde81
 =======
+>>>>>>> 16c0750... 2ì°¨ì› ë°°ì—´ ì§€ê·¸ì¬ê·¸ í’€ì–´ë³´ê¸°. .ë‚œì´ë„ë‚®ìŒ..
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
+=======
 	// z9j9();
 	// add(1, 2);
 	
 	
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 94f9f87... í•¨ìˆ˜ ê°„ë‹¨í•˜ê²Œ ì¨ë³´ê¸°
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
 
 void add(int a, int b) {
 	printf("%d",a + b);
 }
+<<<<<<< HEAD
 >>>>>>> 606da5d... í•¨ìˆ˜ ê°„ë‹¨í•˜ê²Œ ì¨ë³´ê¸°
+=======
+>>>>>>> 1911c7e141cef67e38749067ca02b5027eee0622
