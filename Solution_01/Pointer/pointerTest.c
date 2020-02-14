@@ -43,12 +43,14 @@ void badMemoryAccess() {
 	char* pszBuffer = NULL;
 
 	pszBuffer = (char*)malloc(12);
+
 	gets(pszBuffer);
 	puts(pszBuffer);
 
 	// 오류확인을 위해 의도적으로 해제하지 않음
 	  free(pszBuffer);
 }
+
 
 int main( int argc, char* argv[]) {
 	printf("### Pointer ###\n");
