@@ -1,3 +1,5 @@
 ﻿  pointerTest.c
 C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(47,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(81,10): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(81,10): warning C4313: 'printf': 서식 문자열의 '%p'이(가) 인수 1('int' 형식)과(와) 충돌합니다.
   Pointer.vcxproj -> C:\Users\12nar\source\repos\C_Basic\Solution_01\x64\Debug\Pointer.exe

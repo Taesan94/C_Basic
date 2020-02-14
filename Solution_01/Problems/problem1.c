@@ -458,11 +458,11 @@ void twoArrTest() {
 
 	int i = 0, j = 0;
 
-	// apList는 주소를 담는 변수이다.
-	int* apList = aList;
+	// *apList는 주소를 담는 변수이다.
+	int *apList = aList;
 
-	for (int i = 0; i < 3; i++) {
-		printf("%d\n", apList[i]);
+	for (int i = 0; i < 7; i++) {
+		printf("%d\n", *(apList+i) );
 	}
 
 }
