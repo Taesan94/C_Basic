@@ -51,14 +51,60 @@ void badMemoryAccess() {
 	  free(pszBuffer);
 }
 
+void manyArr() {
 
-int main( int argc, char* argv[]) {
+	char astrList[2][12] = { "hello" , "world" };
+	
+	//char** pstrList = astrList; // 안되네이거..
+	char(*pstrList)[12] = astrList;
+
+	puts(pstrList[0]);
+	puts(pstrList[1]);
+
+}
+
+int staticTest() {
+	// static변수의 정의는 함수가 여러번 호출되도 단 한번만 적용된다.
+	static int nData = 10;
+
+	++nData;
+
+	// static변수는 이 값이 return되더라도 값을 유지하고있는다.
+	return nData;
+}
+
+int GetLength(char* c) {
+	int length = 0;
+
+	while ( *(c + length) != '\0') {
+		 // (c + length)로하면 주소값 찍히네..
+		printf("문자는 ? : %c \n", *(c + length) );
+		length++;
+	}
+	return length;
+}
+
+
+void main() {
 	printf("### Pointer ###\n");
 
 	// pointerOper();
 	// ptrmalloc01();
 	// badMemoryAccess();
+	// manyArr();
 
+	// printf("%d\n" , staticTest());
+	// printf("%d\n", staticTest());
+	// printf("%d\n", staticTest());
+
+	char arr[15] = { "helloworld" };
+	int length = GetLength(arr);
+
+	printf("길이 : %d", length);
+
+}
+
+int main_origin(int argc, char* argv[]) {
 	int i = 0;
 
 	for (i = 0; i < argc; i++)
