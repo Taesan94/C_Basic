@@ -155,22 +155,6 @@ void tournoment() {
 
 }
 
-
-
-void arrayTest() {
-
-	int arr1[] = { 1,2,3 };
-	int arr2[] = { 4,5,6 };
-
-	// arr1 = arr2; // 안됨
-	*arr1 = arr2; // 되는데.. 내가 의도한 대로안되네.. 그냥 arr1[0]번째 요소에 .. arr2의 주소값이 들어가는군..
-
-	for (int i = 0; i < 3; i++) {
-		printf("arr1[%d] = %d\n", i, arr1[i]);
-		printf("arr2[%d] = %d\n", i, arr2[i]);
-	}
-}
-
 void problem06_02() {
 
 	int age;
@@ -183,52 +167,6 @@ void problem06_02() {
 	if (age < 20) won *= (0.75);
 
 	printf("최종요금 : %d", won);
-}
-
-void cautionIfScope() {
-
-	int nInput = 0;
-
-	scanf_s("%d", &nInput);
-
-	if (nInput > 10) {
-		int nInput = 20;
-		printf("%d\n", nInput);
-
-		if (nInput < 20) {
-			int nInput = 30;
-			printf("%d\n", nInput);
-		}
-	}
-
-	printf("%d\n" , nInput);
-}
-
-void functionFor() {
-
-	int i = 0;
-
-	for (i = 0; i < 5; ++i) {
-		printf("%dth\n", i); // th그냥 문자네 ㅡ..ㅡ
-	}
-
-	i = 0;
-
-	for (; i < 5; i++) {
-		printf("[%d] 초기 화 i 생략 가능함 ! 초깃값 0부터 겠네.\n", i );
-	}
-
-
-	for (i = 0; i < 5;) {
-		printf("[%d] 계수기 생략하면.. 무한루프 빠지네 ㅡ..ㅡ 자동 1증가 안되는군 ! !\n",i);
-		break;
-	}
-
-	for (;; ) {
-		printf(" 무 . 한. 루 . 프 . !! ");
-		break;
-	}
-
 }
 
 void forP1() {
@@ -266,17 +204,6 @@ void forP2() {
 		start++;
 	}
 
-}
-
-void makeT() {
-
-	for (int i = 0; i < 5; i++) {
-
-		for (int j = 0; j <= i; j++) {
-			printf("* ");
-		}
-		printf("\n");
-	}
 }
 
 void makeT2() {	
@@ -433,8 +360,6 @@ void snail() {
 	}
 
 }
-
-void add(int, int);
 
 void arrCopyTest() {
 
@@ -450,20 +375,6 @@ void arrCopyTest() {
 	}
 }
 
-void problem06_02() {
-
-	int age;
-
-	printf(" 나이를 입력해 주세요 : ");
-	scanf_s("%d", &age);
-
-	int won = 1000;
-
-	if (age < 20) won *= (0.75);
-
-	printf("최종요금 : %d", won);
-}
-
 void cautionIfScope() {
 
 	int nInput = 0;
@@ -510,43 +421,6 @@ void functionFor() {
 
 }
 
-void forP1() {
-
-	int i = 1;
-	int sum = 0;
-
-	while (i <= 10) {
-		sum += i;
-		i++;
-	}
-
-	printf(" 1~10까지의 합 : %d ", sum);
-
-}
-
-void forP2() {
-
-	int i = 0;
-
-	scanf_s("%d", &i);
-	
-
-	int start = 1;
-
-	while (1) {
-
-		if (i < 2 || i > 9) {
-			printf("ERROR");
-			break;
-		}
-
-		printf("%d & %d = %d\n", i, start, i * start);
-		if (start == 9) break;
-		start++;
-	}
-
-}
-
 void makeT() {
 
 	for (int i = 0; i < 5; i++) {
@@ -558,121 +432,11 @@ void makeT() {
 	}
 }
 
-void makeT2() {	
-
-	for (int i = 0; i < 5; i++) {
-
-		for (int j = i; j < 4; j++) {
-			printf("\t");
-		}
-
-		for (int k = 0; k <= i; k++) {
-			printf("*\t");
-		}
-
-		printf("\n");
-	}
-	
-
-}
-
-void makeT3() {	
-
-	int index = 0;
-
-	for (int i = 1; i <= 5; i++) {
-
-		for (int j = i; j < 5; j++) {
-			printf("\t");
-		}
-
-		//1,3,5,7,9
-		for (int k = 0; k < (2*i)-1; k++) {
-			printf("*\t");
-		}
-
-		printf("\n");
-	}			
-}
-
-void make3_2() {
-
-	for (int i = 0; i < 5; i++) {
-
-		for (int j = 0; j < 5+i; j++) {
-
-			if ( j+i <= 3 ) printf("\t");
-			else printf("*\t");
-		}
-		printf("\n");
-	}
-}
-
-void loopPractice1() {
-
-	int cnt = 0;
-	int sum = 0;
-
-	for (int i = 1; i < 101; i++) {
-		if (i % 4 == 0) {
-			cnt++;
-			sum += i;
-	}
-		}
-
-	printf(" 4의 배수는 총 %d 개 이고, 총합은 %d 입니다.", cnt , sum);
-
-}
-
-void loopPractice2() {
-	
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
-			if (i + j <= 3) printf("\t");
-			else printf("\t*\t");
-		}
-		printf("\n");
-	}
-}
-
-void loopPractice4() {
-
-	int nInput;
-
-	INPUT : 
-		printf("Input number : ");
-		scanf_s("%d", &nInput);
-
-	if (nInput < 0 || nInput > 10) {
-		goto INPUT;
-	}
-
-	puts("End");
-
-}
-
-void loopPractice4_answer() {
-
-	int input = 11;
-
-	while (1) {
-
-		if (input < 0 || input > 10) {
-			printf("Input number : ");
-			scanf_s("%d", &input);
-		}
-		else break;
-	}
-
-}
-
-
-
 void arrayTest() {
 
 	int arr1[] = { 1,2,3 };
 	int arr2[] = { 4,5,6 };
-
+	
 	// arr1 = arr2; // 안됨
 	*arr1 = arr2; // 되는데.. 내가 의도한 대로안되네.. 그냥 arr1[0]번째 요소에 .. arr2의 주소값이 들어가는군..
 
@@ -684,50 +448,21 @@ void arrayTest() {
 	printf("arr2[0]의 주소 : %d" ,&arr2[0]);
 }
 
-void z9j9() {
+void twoArrTest() {
 
-	int arr[5][5] ;
-	int cnt = 1;
+	int aList[3][4] = {
+		{10,20,30,40},
+		{50,60,70,80},
+		{90,100,110,120}
+	};
 
-	for (int i = 0; i < 5; i++) {
+	int i = 0, j = 0;
 
-		int reverse = 0;
+	// apList는 주소를 담는 변수이다.
+	int* apList = aList;
 
-		if (i % 2 == 1) reverse = 1;
-
-		if ( reverse == 0) {
-			for (int j = 0; j < 5; j++) {
-				arr[i][j] = cnt++;
-			}
-		}
-		else {
-			for (int j = 4; j >= 0; j--) {
-				arr[i][j] = cnt++;
-			}
-		}
-	}
-
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
-			printf("%d\t", arr[i][j]);
-		}
-		putchar('\n');
-	}
-}
-
-
-void snail() {
-
-	// 꼭풀어보기.. 달팽이출력
-
-	int arr[5][5];
-
-	for (int i = 0; i < 5; i++) {
-
-		for (int j = 0; j < 5; j++) {
-			
-		}
-
+	for (int i = 0; i < 3; i++) {
+		printf("%d\n", apList[i]);
 	}
 
 }
@@ -750,10 +485,6 @@ int main(void) {
 	// select();
 
 	// survival();
-	arrayTest();
-	// printf("true : %d , false : %d " , 1==1 , 1==2);
-
-	// survival();
 	// arrayTest();
 	// printf("true : %d , false : %d " , 1==1 , 1==2);
 
@@ -772,15 +503,9 @@ int main(void) {
 	// loopPractice3();
 	// loopPractice4_answer();
 	// arrayTest();
-
-	z9j9();
-
-	// loopPractice4_answer();
-	// arrayTest();
 	// z9j9();
 	// add(1, 2);
-	
-	
+	twoArrTest();		
 }
 
 
