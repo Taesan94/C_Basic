@@ -131,7 +131,7 @@ void problem_5_p438() {
 	
 	// printf(" msize : %d , sizeof : %d ", _msize(szpResult), sizeof(szpResult));
 	// 처음이 2번째 인자를 sizeof로 했더니 안됬다..
-	// char* 타입은 기본 4Byte인가보다... 계속 4만찍힌다..
+	// char* 타입은 기본 4Byte인가보다... 계속 4만찍힌다.. 아 맞네.. 32비트로 주소가 구성된다고했으니깐..
 	strcat_s(szpResult, _msize(szpResult), input);
 	
 	puts(szpResult);
@@ -143,35 +143,67 @@ void problem_5_p438() {
 	// printf(" szpBuffer address : [ %p ] , size : %d \n: ", szpBuffer, _msize(szpBuffer));
 }
 
-void problem_6_p438() {
+void charPointerArr() {
 
-	int count;
+	char* astrList[3] = { "abc" , "def" , "ghi" };
+	
+	char astrList2[3] = { "rty" };
+	
+	
+	char* *psz;
+	// psz가 char* 이면 에러남.
+	psz = astrList;
+	
+	char *psz2;
+	psz2 = astrList2;
 
-	printf(" 입력받을 문자열의 갯수를 지정해 주세요. ");
-	scanf_s("%d", &count);
-	putchar('\n');
+	printf("astrList2 : %c\n", psz2[0]);
+	printf("astrList2 : %c\n", psz2[1]);
+	printf("astrList2 : %c\n", psz2[2]);
 
-	int maxSize;
-
-	printf(" 문자열의 최대 크기를 입력해 주세요. ");
-	scanf_s("%d", &maxSize);
-	putchar('\n');
-
-	// char*타입의 주소를 담고있는 변수 *words
-	char* words;
-	words = calloc( maxSize, sizeof(char));
-
-	for (int i = 0; i < count; i++) {
-		scanf_s("%s", words + i, maxSize);
-	}
-
-	for (int i = 0; i < count; i++) {
-		//printf("%s : " , *words[i] );
-	}
-
+	printf("astrList : %s\n", psz[0]);
+	printf("astrList : %s\n", psz[1]);
+	printf("astrList : %s\n", psz[2]);
 
 }
 
+void problem_6_p438() {
+	
+	int cnt = 0;
+	printf("몇개의 문자열을 입력하실 겁니까 ? : ");
+	scanf_s("%d", &cnt);
+	
+	char* *pszArr;
+
+	// 주소값을 가지고있는 포인터, *pszArr에는 총 3개의 (char**)타입 공간을 할당해준다.
+	pszArr = (char**)malloc(sizeof(char*)*cnt);
+
+	int maxLength= 0;
+	printf("문자열의 최대 크기는 ? : ");
+	scanf_s("%d", &maxLength);
+
+	// cnt만큼 입력받으면서 pszArr의 요소에 하나씩 넣어준다.
+	for (int i = 0; i < cnt; i++) {
+
+		char* pszTempArr;
+		pszTempArr = (char*)malloc(sizeof(char)*maxLength);
+
+		printf("%d 번째 문자 열을 입력해주세요 : ", i );
+		scanf_s("%s", pszTempArr , _msize(pszTempArr));
+		
+		pszArr[i] = pszTempArr;
+
+		// free하면 for문 밖에서 값이 제대로 출력안됨..
+		// free(pszTempArr);
+		
+	}
+	// 출력
+	for (int i = 0; i < cnt; i++) {
+		printf("%d 번째 문자 열은 : [ %p ] %s \n", i, pszArr[i] , pszArr[i] );
+	}
+
+	free(pszArr);
+}
 
 void main() {
 	printf("### Pointer ###\n");
@@ -193,12 +225,9 @@ void main() {
 	//scanf_s("%s", arr , sizeof(arr));
 	//myStrrev(arr);
 
-	 problem_5_p438();
+	// problem_5_p438();
 
-	// problem_6_p438();
-
-
-
+	 problem_6_p438();
 
 }
 
