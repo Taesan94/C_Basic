@@ -196,6 +196,8 @@ void problem_6_p438() {
 		// free하면 for문 밖에서 값이 제대로 출력안됨..
 		// free(pszTempArr);
 		
+		//0x012E5868
+		//0x012EA5C0
 	}
 	// 출력
 	for (int i = 0; i < cnt; i++) {
@@ -203,6 +205,11 @@ void problem_6_p438() {
 	}
 
 	free(pszArr);
+}
+
+int* badFunction() {
+	int nData = 10;
+	return &nData;
 }
 
 void main() {
@@ -228,6 +235,15 @@ void main() {
 	// problem_5_p438();
 
 	 problem_6_p438();
+	
+	//int* pnReslut = NULL;
+	//pnReslut = badFunction();
+	//printf("%d\n" , *pnReslut);
+
+	//  Ctrl + K + C 주석처리 ㅎ
+
+
+
 
 }
 

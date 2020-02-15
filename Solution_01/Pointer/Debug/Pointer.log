@@ -1,3 +1,4 @@
 ﻿  pointerTest.c
 C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(47,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(210): warning C4172: 지역 변수 또는 임시: nData의 주소를 반환하고 있습니다.
   Pointer.vcxproj -> C:\KTS_DEV\WorkSpace_forC\Solution_01\Debug\Pointer.exe
