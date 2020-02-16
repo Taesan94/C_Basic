@@ -196,12 +196,13 @@ void problem_6_p438() {
 		// free하면 for문 밖에서 값이 제대로 출력안됨..
 		// free(pszTempArr);
 		
-		//0x012E5868
-		//0x012EA5C0
+		//0x00FC5868 > a 
+		//0x00FCA5C0 > b
 	}
 	// 출력
 	for (int i = 0; i < cnt; i++) {
 		printf("%d 번째 문자 열은 : [ %p ] %s \n", i, pszArr[i] , pszArr[i] );
+		free(pszArr[i]);
 	}
 
 	free(pszArr);
