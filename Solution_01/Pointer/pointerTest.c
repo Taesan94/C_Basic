@@ -288,6 +288,25 @@ void usersprintf() {
 
 }
 
+void useStrbrk() {
+
+	char szBuffer[128] = { 0 };
+	char szSet[128] = { 0 };
+	
+	char *pszStart = szBuffer;
+
+	printf(" Input string : ");
+	gets_s(szBuffer, sizeof(szBuffer));
+
+	printf("Input charcater set : ");
+	gets_s(szSet, sizeof(szSet));
+
+	while((pszStart = strpbrk(pszStart, szSet)) != NULL) {
+		printf("[%p] Index : %d, %c\n", pszStart, pszStart - szBuffer, *pszStart);
+		pszStart++;
+	}
+}
+
 void main() {
 	printf("### Pointer ###\n");
 
@@ -331,9 +350,9 @@ void main() {
 	// pszEnd = mystrcat(pszEnd, "ccc");
 	// puts(dest);
 
-	usersprintf();
+	// usersprintf();
 
-
+	useStrbrk();
 
 
 	//  Ctrl + K + C 주석처리 ㅎ
