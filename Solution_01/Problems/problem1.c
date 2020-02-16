@@ -463,6 +463,7 @@ void twoArrTest() {
 
 	for (int i = 0; i < 7; i++) {
 		printf("%d\n", *(apList+i) );
+
 	}
 
 }

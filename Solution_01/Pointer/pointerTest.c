@@ -213,6 +213,65 @@ int* badFunction() {
 	return &nData;
 }
 
+void test() {
+	int aList[3] = { 10, 20, 30 };
+
+	int* pnData = aList;
+
+	// pnData + 1 = 100;
+	*(pnData + 1) = 100;
+}
+
+void originStrcat() {
+
+	// 백슬래쉬를 표현하고싶을때 \\로 기술.
+	char szPath[128] = { "C:\\Program Files\\" };
+	
+	// _msize함수는 heap영역의 크기를 측정하는거구나 ㅡ..ㅡ.... 
+	
+	// 원래는 이렇게 쓰는데..
+	// 여기서 szPath함수에 포함된 문자열 뒤에 3번째 인자값 KTS\\를 붙이기위해서 내부적으로 strlen함수가 사용된다.
+	strcat_s(szPath, sizeof(szPath), "KTS\\");
+	strcat_s(szPath, sizeof(szPath), "C_programming");
+
+	puts(szPath);
+
+}
+
+char* pointerCheck(char* pszDst, char* pszSrc) {
+
+	//0x0043FBE8
+
+	// pszDst  >> 0x0043FBE8 >> abcd
+	// *pszDst >> 
+	// &pszDst >> 0x0043FAF4 >> e8 fb 43 00 cc fb 43 00
+
+	printf(" pszDst : [ %p , %s ] \n", pszDst, pszDst);
+	printf(" *pszDst : [ %p , %c ] \n ", *pszDst+0 , *pszDst );
+
+}
+
+// 문자열을 붙인다.
+char* mystrcat(char* pszDst, char* pszSrc) {
+
+	// 1. dst 문자열의 길이를 구한다.
+	while (*pszDst != '\0') {
+		printf(" dst의 문자열의 길이를 구하는 for문 ! \n");
+		pszDst++;
+	}
+		
+
+	// src의 값을 pszDst뒤에 붙여준다.
+	while(*pszSrc != '\0')
+		*pszDst++ = *pszSrc++;
+
+	// 마지막 null문자를 붙여준다.
+	*++pszDst = '\0';
+
+	return --pszDst;
+
+}
+
 void main() {
 	printf("### Pointer ###\n");
 
@@ -235,16 +294,30 @@ void main() {
 
 	// problem_5_p438();
 
-	 problem_6_p438();
+	// problem_6_p438();
 	
-	//int* pnReslut = NULL;
-	//pnReslut = badFunction();
-	//printf("%d\n" , *pnReslut);
+	// int* pnReslut = NULL;
+	// pnReslut = badFunction();
+	// printf("%d\n" , *pnReslut);
+
+	// test();
+
+	// originStrcat();
+
+	//0x00CFF8DC
+	 char dest[20] = { 0 };
+	 char* pszEnd = NULL;
+
+	// pointerCheck(dest, src);
+	 pszEnd = mystrcat(dest, "abcd");
+	 pszEnd = mystrcat(pszEnd, "aaa");
+	 pszEnd = mystrcat(pszEnd, "bbb");
+	 pszEnd = mystrcat(pszEnd, "ccc");
+
+	 puts(dest);
+
 
 	//  Ctrl + K + C 주석처리 ㅎ
-
-
-
 
 }
 
