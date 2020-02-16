@@ -268,7 +268,23 @@ char* mystrcat(char* pszDst, char* pszSrc) {
 	// 마지막 null문자를 붙여준다.
 	*++pszDst = '\0';
 
+	// -- 안해주면 \0이 끝이라서, puts로 하면 최초 ' ' 앞의 문자열만 출력함.. ! 해줘야 됨 !
 	return --pszDst;
+
+}
+
+// 자주 쓰이지는 않지만 알아두면 유용하다.
+void usersprintf() {
+
+	char szPath[128] = { 0 };
+	char szBuffer[128] = { 0 };
+
+	printf(" Input path : ");
+	gets_s(szBuffer , sizeof(szBuffer));
+
+	sprintf_s(szPath, sizeof(szPath), "c:\\Program Files\\%s", szBuffer);
+	
+	puts(szPath);
 
 }
 
@@ -304,17 +320,20 @@ void main() {
 
 	// originStrcat();
 
-	//0x00CFF8DC
-	 char dest[20] = { 0 };
-	 char* pszEnd = NULL;
-
 	// pointerCheck(dest, src);
-	 pszEnd = mystrcat(dest, "abcd");
-	 pszEnd = mystrcat(pszEnd, "aaa");
-	 pszEnd = mystrcat(pszEnd, "bbb");
-	 pszEnd = mystrcat(pszEnd, "ccc");
 
-	 puts(dest);
+	//char dest[20] = { 0 };
+	//char* pszEnd = NULL;
+
+	// pszEnd = mystrcat(dest, "abcd");
+	// pszEnd = mystrcat(pszEnd, "aaa");
+	// pszEnd = mystrcat(pszEnd, "bbb");
+	// pszEnd = mystrcat(pszEnd, "ccc");
+	// puts(dest);
+
+	usersprintf();
+
+
 
 
 	//  Ctrl + K + C 주석처리 ㅎ
