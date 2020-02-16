@@ -295,16 +295,34 @@ void useStrbrk() {
 	
 	char *pszStart = szBuffer;
 
+	// 검색 대상 문자열을 입력받는다.
 	printf(" Input string : ");
 	gets_s(szBuffer, sizeof(szBuffer));
 
+	// 찾을 '문자들'을 입력받는다.
 	printf("Input charcater set : ");
 	gets_s(szSet, sizeof(szSet));
 
+	// 대상 문자열에 일치하는 문자가 있는지 검색한다.
 	while((pszStart = strpbrk(pszStart, szSet)) != NULL) {
 		printf("[%p] Index : %d, %c\n", pszStart, pszStart - szBuffer, *pszStart);
+		// 일치하는 하나를 찾았으므로 다음으로 이동하고 계속 찾는다.
 		pszStart++;
 	}
+}
+
+void useAtoi() {
+
+	char szBuffer[32];
+	int nReslut = 0;
+
+	printf("Input String : ");
+	gets_s(szBuffer ,sizeof(szBuffer));
+
+	// 문자열을 입력하면 int타입으로 반환함을 주의하자.
+	nReslut = atoi(szBuffer);
+	printf("%d\n", nReslut);
+
 }
 
 void main() {
@@ -352,8 +370,8 @@ void main() {
 
 	// usersprintf();
 
-	useStrbrk();
-
+	// useStrbrk();
+	useAtoi();
 
 	//  Ctrl + K + C 주석처리 ㅎ
 
