@@ -325,7 +325,35 @@ void useAtoi() {
 
 }
 
+void useRand() {
+
+	int i = 0;
+
+	// 이거 주석처리하면 계속 같은 난수가 발생함...
+	srand( (unsigned)time( NULL ));
+
+	for (i = 0; i < 10; i++) {
+		//printf("%6d\n", rand());
+	}
+	// 0~10미만 난수발생
+	for (i = 0; i < 10; i++) {
+		printf("%6d\n", rand() % 3);
+	}
+}
+
+void useSystem() {
+
+	char szCommand[512] = { 0 };
+	printf("Input command : ");
+	gets_s(szCommand,sizeof(szCommand));
+
+	system(szCommand);
+
+}
+
+
 void main() {
+
 	printf("### Pointer ###\n");
 
 	// pointerOper();
@@ -371,7 +399,11 @@ void main() {
 	// usersprintf();
 
 	// useStrbrk();
-	useAtoi();
+	// useAtoi();
+
+	// useRand();
+
+	useSystem();
 
 	//  Ctrl + K + C 주석처리 ㅎ
 
