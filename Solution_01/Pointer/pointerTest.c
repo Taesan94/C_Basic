@@ -342,14 +342,42 @@ void useRand() {
 }
 
 void useSystem() {
-
 	char szCommand[512] = { 0 };
 	printf("Input command : ");
 	gets_s(szCommand,sizeof(szCommand));
 
 	system(szCommand);
-
 }
+
+int problem_chapter12_01(char* destStr, char* findStr) {
+
+
+	// findStr의 첫번째 글자를 찾은 이후부터 연속해서 findStr가 모두 있는지 확인한다.
+	char startC = *findStr + 0; // find[0]
+
+	int maxLen = strlen(findStr);
+	int cnt = 0;
+
+	int reslutIndex = -1;
+	
+
+	for (int i = 0; i < strlen(destStr); i++) {
+		
+		// 시작점부터 cnt한다.
+		if (destStr[i] == startC) {		
+			reslutIndex = i;
+			if (maxLen == 1) return reslutIndex;
+			while (cnt < maxLen-1 && i <= sizeof(destStr)) {
+				if (findStr[++cnt] != destStr[++i]) {
+					return -1;
+				}
+			}
+			break;
+		}
+	}
+	return reslutIndex;
+}
+
 
 
 void main() {
@@ -362,7 +390,7 @@ void main() {
 	// manyArr();
 
 	// printf("%d\n" , staticTest());
-	// printf("%d\n", staticTest());
+	// printf("%d\  n", staticTest());
 	// printf("%d\n", staticTest());
 
 	// char arr[15] = { "helloworld" };
@@ -403,7 +431,31 @@ void main() {
 
 	// useRand();
 
-	useSystem();
+	// useSystem();
+
+	//char* aList[5] = {
+	//	"정형돈",
+	//	"노홍철",
+	//	"하하",
+	//	"유재석",
+	//	"박명수"
+	//};
+
+	//int i = 0;
+
+	//SortString(aList, 5);
+
+	//for (int i = 0; i < 5; i++) {
+	//	puts(aList[i]);
+	//}
+
+	char destStr[] = {"aaabcdaaa"};
+	char findStr[] = {"bcd"};
+
+	int index = problem_chapter12_01(destStr, findStr);
+
+	printf(" 문자열의 시작위치는 [ %d ] ", index);
+
 
 	//  Ctrl + K + C 주석처리 ㅎ
 
