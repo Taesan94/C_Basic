@@ -378,6 +378,16 @@ int problem_chapter12_01(char* destStr, char* findStr) {
 	return reslutIndex;
 }
 
+int GetTotal(int (*arr)[4]) {
+
+	int sum = 0;
+
+	for (int i = 0; i < 20; i++) {
+		sum += arr[0][i];
+	}
+
+	return sum;
+}
 
 
 void main() {
@@ -433,30 +443,21 @@ void main() {
 
 	// useSystem();
 
-	//char* aList[5] = {
-	//	"정형돈",
-	//	"노홍철",
-	//	"하하",
-	//	"유재석",
-	//	"박명수"
-	//};
+	//char destStr[] = {"aaabcdaaa"};
+	//char findStr[] = {"bcd"};
+	//int index = problem_chapter12_01(destStr, findStr);
+	//printf(" 문자열의 시작위치는 [ %d ] ", index);
 
-	//int i = 0;
+	int arr[5][4] = {
+	{ 10,10,10,10 },
+	{ 10,10,10,10 },
+	{ 10,10,10,10 },
+	{ 10,10,10,10 },
+	{ 1,1,1,1 }
+	};
 
-	//SortString(aList, 5);
-
-	//for (int i = 0; i < 5; i++) {
-	//	puts(aList[i]);
-	//}
-
-	char destStr[] = {"aaabcdaaa"};
-	char findStr[] = {"bcd"};
-
-	int index = problem_chapter12_01(destStr, findStr);
-
-	printf(" 문자열의 시작위치는 [ %d ] ", index);
-
-
+	int sum = GetTotal(arr);
+	printf(" 총 합은 : %d", sum);
 	//  Ctrl + K + C 주석처리 ㅎ
 
 }
