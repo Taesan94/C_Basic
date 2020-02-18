@@ -3,6 +3,7 @@
 #include<stdlib.h>
 //memset()함수를 위한 헤더 포함
 #include<string.h>
+#include<time.h>
 
 void pointerOper() {
 
@@ -389,6 +390,24 @@ int GetTotal(int (*arr)[4]) {
 	return sum;
 }
 
+void timeFunc() {
+
+	struct tm* ptime = { 0 };
+	time_t t = 0;
+
+	t = time(NULL);
+	ptime = localtime(&t);
+
+	// 계속 에러나서.. 속성 > C/C++ > 전처리기 > 전처리기 정의에 [  ;_CRT_SECURE_NO_WARNINGS  ]추가 함.
+	printf("%d\n", t);
+	printf("%s", ctime(&t));
+
+	printf("%04d-%02d-%02d\n", ptime->tm_year + 1900, ptime->tm_mon + 1, ptime->tm_mday);
+
+
+
+}
+
 
 void main() {
 
@@ -448,16 +467,20 @@ void main() {
 	//int index = problem_chapter12_01(destStr, findStr);
 	//printf(" 문자열의 시작위치는 [ %d ] ", index);
 
-	int arr[5][4] = {
-	{ 10,10,10,10 },
-	{ 10,10,10,10 },
-	{ 10,10,10,10 },
-	{ 10,10,10,10 },
-	{ 1,1,1,1 }
-	};
+	//int arr[5][4] = {
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 1,1,1,1 }
+	//};
 
-	int sum = GetTotal(arr);
-	printf(" 총 합은 : %d", sum);
+	//int sum = GetTotal(arr);
+	//printf(" 총 합은 : %d", sum);
+
+	timeFunc();
+
+
 	//  Ctrl + K + C 주석처리 ㅎ
 
 }
