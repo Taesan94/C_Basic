@@ -1,6 +1,8 @@
 ﻿  pointerTest.c
 C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(47,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(250,9): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
-C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(213): warning C4172: 지역 변수 또는 임시: nData의 주소를 반환하고 있습니다.
+C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(382,10): warning C4013: 'userRand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(252): warning C4716: 'pointerCheck': 값을 반환해야 합니다.
-  Pointer.vcxproj -> C:\KTS_DEV\WorkSpace_forC\Solution_01\Debug\Pointer.exe
+C:\KTS_DEV\WorkSpace_forC\Solution_01\Pointer\pointerTest.c(213): warning C4172: 지역 변수 또는 임시: nData의 주소를 반환하고 있습니다.
+pointerTest.obj : error LNK2019: _userRand 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+C:\KTS_DEV\WorkSpace_forC\Solution_01\Debug\Pointer.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

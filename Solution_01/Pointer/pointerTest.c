@@ -325,6 +325,13 @@ void useAtoi() {
 
 }
 
+void useRand() {
+
+	int i = 0;
+
+
+}
+
 void main() {
 	printf("### Pointer ###\n");
 
@@ -371,8 +378,8 @@ void main() {
 	// usersprintf();
 
 	// useStrbrk();
-	useAtoi();
-
+	// useAtoi();
+	userRand();
 	//  Ctrl + K + C 주석처리 ㅎ
 
 }
