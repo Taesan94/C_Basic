@@ -3,6 +3,7 @@
 #include<stdlib.h>
 //memset()함수를 위한 헤더 포함
 #include<string.h>
+#include<time.h>
 
 void pointerOper() {
 
@@ -329,10 +330,86 @@ void useRand() {
 
 	int i = 0;
 
+	// 이거 주석처리하면 계속 같은 난수가 발생함...
+	srand( (unsigned)time( NULL ));
+
+	for (i = 0; i < 10; i++) {
+		//printf("%6d\n", rand());
+	}
+	// 0~10미만 난수발생
+	for (i = 0; i < 10; i++) {
+		printf("%6d\n", rand() % 3);
+	}
+}
+
+void useSystem() {
+	char szCommand[512] = { 0 };
+	printf("Input command : ");
+	gets_s(szCommand,sizeof(szCommand));
+
+	system(szCommand);
+}
+
+int problem_chapter12_01(char* destStr, char* findStr) {
+
+
+	// findStr의 첫번째 글자를 찾은 이후부터 연속해서 findStr가 모두 있는지 확인한다.
+	char startC = *findStr + 0; // find[0]
+
+	int maxLen = strlen(findStr);
+	int cnt = 0;
+
+	int reslutIndex = -1;
+	
+
+	for (int i = 0; i < strlen(destStr); i++) {
+		
+		// 시작점부터 cnt한다.
+		if (destStr[i] == startC) {		
+			reslutIndex = i;
+			if (maxLen == 1) return reslutIndex;
+			while (cnt < maxLen-1 && i <= sizeof(destStr)) {
+				if (findStr[++cnt] != destStr[++i]) {
+					return -1;
+				}
+			}
+			break;
+		}
+	}
+	return reslutIndex;
+}
+
+int GetTotal(int (*arr)[4]) {
+
+	int sum = 0;
+
+	for (int i = 0; i < 20; i++) {
+		sum += arr[0][i];
+	}
+
+	return sum;
+}
+
+void timeFunc() {
+
+	struct tm* ptime = { 0 };
+	time_t t = 0;
+
+	t = time(NULL);
+	ptime = localtime(&t);
+
+	// 계속 에러나서.. 속성 > C/C++ > 전처리기 > 전처리기 정의에 [  ;_CRT_SECURE_NO_WARNINGS  ]추가 함.
+	printf("%d\n", t);
+	printf("%s", ctime(&t));
+
+	printf("%04d-%02d-%02d\n", ptime->tm_year + 1900, ptime->tm_mon + 1, ptime->tm_mday);
+
+
 
 }
 
 void main() {
+
 	printf("### Pointer ###\n");
 
 	// pointerOper();
@@ -341,7 +418,7 @@ void main() {
 	// manyArr();
 
 	// printf("%d\n" , staticTest());
-	// printf("%d\n", staticTest());
+	// printf("%d\  n", staticTest());
 	// printf("%d\n", staticTest());
 
 	// char arr[15] = { "helloworld" };
@@ -380,6 +457,30 @@ void main() {
 	// useStrbrk();
 	// useAtoi();
 	userRand();
+
+	// useRand();
+
+	// useSystem();
+
+	//char destStr[] = {"aaabcdaaa"};
+	//char findStr[] = {"bcd"};
+	//int index = problem_chapter12_01(destStr, findStr);
+	//printf(" 문자열의 시작위치는 [ %d ] ", index);
+
+	//int arr[5][4] = {
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 10,10,10,10 },
+	//{ 1,1,1,1 }
+	//};
+
+	//int sum = GetTotal(arr);
+	//printf(" 총 합은 : %d", sum);
+
+	timeFunc();
+
+
 	//  Ctrl + K + C 주석처리 ㅎ
 
 }

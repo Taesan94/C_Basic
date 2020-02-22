@@ -1,5 +1,28 @@
 ﻿  pointerTest.c
-C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(47,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(81,10): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
-C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(81,10): warning C4313: 'printf': 서식 문자열의 '%p'이(가) 인수 1('int' 형식)과(와) 충돌합니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(48,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(109,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(109,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(118,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(118,9): message : 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(118,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(118,9): message : 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(121,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(121,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(110,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(122,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(193,11): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(193,11): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(251,9): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(251,9): warning C4313: 'printf': 서식 문자열의 '%p'이(가) 인수 1('int' 형식)과(와) 충돌합니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(309,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 '__int64'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(309,10): message : 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(309,10): message : 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(309,10): message : 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(359,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(402,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'time_t'입니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(402,9): message : 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(402,9): message : 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(402,9): message : 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(214): warning C4172: 지역 변수 또는 임시: nData의 주소를 반환하고 있습니다.
+C:\Users\12nar\source\repos\C_Basic\Solution_01\Pointer\pointerTest.c(253): warning C4716: 'pointerCheck': 값을 반환해야 합니다.
   Pointer.vcxproj -> C:\Users\12nar\source\repos\C_Basic\Solution_01\x64\Debug\Pointer.exe
